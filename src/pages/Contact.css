@@ -1,0 +1,88 @@
+.contact-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  color: #fff;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+/* Tree Animation */
+.tree-container.left,
+.tree-container.right {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.tree-container.left {
+  left: 0;
+  width: 50%;
+}
+
+.tree-container.right {
+  left: 50%;
+  width: 50%;
+}
+
+.tree-column {
+  flex: 0 0 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tree-char {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  opacity: 0.3;
+  filter: blur(0.7px);
+  line-height: 1.2em;
+}
+
+/* Contact Card */
+.contact-card {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: none;   /* disable hover move */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3); /* keep shadow static */
+}
+
+
+.contact-card h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.contact-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}

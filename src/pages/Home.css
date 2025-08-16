@@ -1,0 +1,183 @@
+.home-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background: #000000;
+}
+
+/* Left tree */
+.tree-container.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;      /* left half */
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+}
+
+/* Right tree */
+.tree-container.right {
+  position: fixed;
+  top: 0;
+  left: 50%;       /* start at middle */
+  width: 50%;      /* right half */
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+}
+
+.tree-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tree-char {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  opacity: 0.3;
+  filter: blur(0.7px);
+  line-height: 1.2em;
+}
+
+/* Foreground Hero */
+.hero-text {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin: 10vh auto 0 auto;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  max-width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 5vw;
+  font-weight: 900;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.8vw;
+  margin-top: 10px;
+}
+
+/* Sections */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px 0;
+  padding: 0 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  color: #fff;
+}
+.tree-container.left,
+
+.tree-container.right {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+  overflow: hidden; /* prevent spillover */
+}
+
+.tree-container.left {
+  left: 0;
+  width: 50%;
+}
+
+.tree-container.right {
+  left: 50%;
+  width: 50%;
+}
+
+.tree-column {
+  flex: 0 0 4%; /* each column takes ~4% of container width, adjust to fit 25 columns */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tree-char {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  opacity: 0.3;
+  filter: blur(0.7px);
+  line-height: 1.2em;
+}
+/* Content blocks */
+.content-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 150px 20px 100px 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.content-blocks .card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-blocks .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+}
+
+.content-blocks .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.content-blocks .card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.page-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #000; /* black background */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+.navbar {
+  position: relative;
+  z-index: 100;
+}
+.hero-text {
+  margin-top: 120px; /* adjust based on navbar height */
+}
